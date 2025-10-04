@@ -1,7 +1,6 @@
 
 
 def getBondPrice_Z(face, couponRate, times, yc):
-    def getBondPrice_Z(face, couponRate, times, yc):
     couponPayment = face * couponRate
     BondPrice = 0.0
 
