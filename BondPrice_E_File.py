@@ -15,8 +15,6 @@ def getBondPrice_E(face, couponRate, m, yc):
 
         bond_price += pvcf
 
-        print(f"t={t}, y={y:.3%}, cash_flow={cash_flow:,.2f}, "
-              f"pv_factor={pv_factor:.6f}, pvcf={pvcf:,.2f}")
 
     return bond_price
 
