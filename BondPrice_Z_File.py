@@ -1,4 +1,5 @@
 
+
 def getBondPrice_Z(face, couponRate, times, yc):
     couponPayment = face * couponRate
     BondPrice = 0.0
@@ -10,8 +11,8 @@ def getBondPrice_Z(face, couponRate, times, yc):
             cash_flow = couponPayment
 
         pv_factor = 1 / (1 + yc_rate) ** t
-        pvecf = cash_flow * pv_factor
+        pvcf = cash_flow * pv_factor
 
-        BondPrice += pvecf
+        BondPrice += pvcf
 
     return BondPrice
