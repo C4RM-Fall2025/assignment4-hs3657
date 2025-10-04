@@ -1,20 +1,17 @@
 
 
 def getBondPrice_E(face, couponRate, m, yc):
-    coupon_payment = face * couponRate
-    bond_price = 0
+    couponPayment = face * couponRate
+    bondPrice = 0.0
+    n = len(yc)
 
-    for t, y in enumerate(yc, start=1):
-        if t == m:
-            cash_flow = coupon_payment + face
+    for i, r in enumerate(yc, start=1):
+        if i == n:
+            cash_flow = couponPayment + face
         else:
-            cash_flow = coupon_payment
+            cash_flow = couponPayment
 
-        pv_factor = 1 / (1 + y) ** t
-        pvcf = cash_flow * pv_factor
+        pv_factor = 1 / (1 + r) ** i
+        bondPrice += cash_flow * pv_factor
 
-        bond_price += pvcf
-
-
-    return bond_price
-
+    return bondPrice
